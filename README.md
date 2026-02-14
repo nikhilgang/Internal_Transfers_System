@@ -44,7 +44,6 @@ internal/
   repository/                   — SQL data access layer
   service/                      — Business logic & interfaces
 migrations/                     — SQL migration files
-run_tests.sh                    — Bash integration test suite
 ```
 
 ---
@@ -175,23 +174,6 @@ POST /transactions
 | `400` | Validation error |
 | `404` | Account not found |
 | `422` | Insufficient balance |
-
----
-
-## 🧪 Running Tests
-
-```bash
-# Go unit tests (with race detector)
-make test
-
-# Integration test suite (requires running server)
-# Terminal 1:
-make local-db-drop && make local-setup
-make run
-
-# Terminal 2:
-bash run_tests.sh
-```
 
 ---
 
